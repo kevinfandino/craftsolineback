@@ -31,6 +31,11 @@ public class ProductController {
 		return eService.getSingleProduct(id);
 	}
 	
+	@GetMapping("/product/search")
+	public List<Product> search(@RequestParam("word") String word) {
+		return eService.searchProduct(word);
+	}
+	
 	@PostMapping("/product")
 	public Product saveProduct(@RequestBody Product product) {
 		return eService.saveProduct(product);

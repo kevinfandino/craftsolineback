@@ -29,6 +29,7 @@ public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Long id;
 	
 	// Cambia el nombre de la propiedad, en este caso, el name al momento de mandar
@@ -53,11 +54,11 @@ public class Employee {
 	
 	@CreationTimestamp
 	@Column(name="created_at", nullable = false, updatable = false)
-	private Date createdAt;
+	private Date created_at;
 	
 	@UpdateTimestamp
 	@Column(name="updated_at")
-	private Date updateAt;
+	private Date update_at;
 	
 	
 
@@ -107,19 +108,19 @@ public class Employee {
 	}
 
 	public Date getCreatedAt() {
-		return createdAt;
+		return created_at;
 	}
 
 	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+		this.created_at = createdAt;
 	}
 
 	public Date getUpdateAt() {
-		return updateAt;
+		return update_at;
 	}
 
 	public void setUpdateAt(Date updateAt) {
-		this.updateAt = updateAt;
+		this.update_at = updateAt;
 	}
 
 	
