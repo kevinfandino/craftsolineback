@@ -1,6 +1,7 @@
 package proy.arq.springrestapi.controller;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,6 +17,7 @@ import proy.arq.springrestapi.model.Product;
 import proy.arq.springrestapi.service.ProductService;
 
 @RestController
+@CrossOrigin
 public class ProductController {
 
 	@Autowired
